@@ -17,10 +17,11 @@ module.exports = {
       {
           use: '@gridsome/source-strapi',
           options: {
-              apiURL: 'http://localhost:1337',
+              apiURL: process.env.GRIDSOME_API_URL,
               queryLimit: 1000,
               contentTypes: ['post','tag'],
               singleTypes: ['general'],
+              typeName: 'Strapi'
               // 访问受保护的api需要的用户名和密码
               // loginData: {
               //     identifier: '',
